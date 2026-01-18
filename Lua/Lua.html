@@ -17,7 +17,6 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230e0e0e'/%3E%3Ctext x='50' y='68' font-family='Inter,Arial' font-size='56' fill='%23ffffff' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon.ico">
@@ -31,6 +30,7 @@
     <a href="#about">About</a>
     <a href="#scripting">Scripting</a>
     <a href="#modeling">Modeling</a>
+    <a href="3d-viewer.html" class="nav-3d-link">3D Viewer</a>
     <a href="#contact">Contact</a>
   </div>
   
@@ -61,8 +61,13 @@
       development workflows for professional Roblox projects.
     </p>
     
+    <a href="3d-viewer.html" class="btn-3d-viewer">
+      <i class="fas fa-cube"></i>
+      View 3D Models Gallery
+    </a>
   </div>
-  <img src="static/profile.png">
+  <!-- PERFIL: está en payments/profile.png según tu estructura -->
+  <img src="static/profile.png" alt="Profile picture of st1yler">
 </section>
 
 <section id="scripting">
@@ -118,7 +123,7 @@
       <div class="video-description">Ai Bossfight And Zombies, Leveling, Game modes, scallabe, easy to handle the rounds system and the diferents difficults</div>
     </div>
 
-<div class="video-card-compact" data-video-id="1155631862" data-title="Shop UI DATASTORE" data-description="Modular Shop UI with Datastore integration and easy way to manage items" data-category="scripting">
+    <div class="video-card-compact" data-video-id="1155631862" data-title="Shop UI DATASTORE" data-description="Modular Shop UI with Datastore integration and easy way to manage items" data-category="scripting">
       <div class="video-thumbnail">
         <iframe 
           src="https://vimeo.com/1155631862?fl=ip&fe=ec"
@@ -134,8 +139,7 @@
       <div class="video-description">Modular Shop UI with Datastore integration and easy way to manage items</div>
     </div>
 
-
-<div class="video-card-compact" data-video-id="1155631838" data-title="Modular Map Round System team-based" data-description="Modular map round system with easy way to manage rounds and maps, only adding the name of the map in a workspace folder, and the thumbnail in the model poperties!" data-category="scripting">
+    <div class="video-card-compact" data-video-id="1155631838" data-title="Modular Map Round System team-based" data-description="Modular map round system with easy way to manage rounds and maps, only adding the name of the map in a workspace folder, and the thumbnail in the model poperties!" data-category="scripting">
       <div class="video-thumbnail">
         <iframe 
           src="https://vimeo.com/1155631838?fl=ip&fe=ec"
@@ -151,7 +155,7 @@
       <div class="video-description">Modular map round system with easy way to manage rounds and maps, only adding the name of the map in a workspace folder, and the thumbnail in the model poperties!</div>
     </div>
 
-    <div class="video-card-compact" data-video-id="1155631800" data-title="RPG Camera" data-description="Dynamic Spectate system, with filters by team and friends spectate, easy to use and add in your game , Optimized , made with only 1 script for all the plants possible!" data-category="scripting">
+    <div class="video-card-compact" data-video-id="1155631800" data-title="Physics-based Smart Plants" data-description="Dynamic Spectate system, with filters by team and friends spectate, easy to use and add in your game , Optimized , made with only 1 script for all the plants possible!" data-category="scripting">
       <div class="video-thumbnail">
         <iframe 
           src="https://vimeo.com/1155631800?fl=ip&fe=ec"
@@ -164,9 +168,10 @@
         </div>
       </div>
       <div class="video-title">Physics-based Smart Plants</div>
-      <div class="video-description">Dynamic Spectate system, with filters by team and friends spectate, easy to use and add in your game , Optimized , made with only 1 script for all the plants possible! </div>
+      <div class="video-description">Dynamic Spectate system, with filters by team and friends spectate, easy to use and add in your game , Optimized , made with only 1 script for all the plants possible!</div>
     </div>
-  <div class="video-card-compact" data-video-id="1155631827" data-title="RPG Camera" data-description="Dynamic Spectate system, with filters by team and friends spectate, easy to use and add in your game with your own ui style!" data-category="scripting">
+  
+    <div class="video-card-compact" data-video-id="1155631827" data-title="Modular Spectate system" data-description="Dynamic Spectate system, with filters by team and friends spectate, easy to use and add in your game with your own ui style!" data-category="scripting">
       <div class="video-thumbnail">
         <iframe 
           src="https://vimeo.com/1155631827?fl=ip&fe=ec"
@@ -226,7 +231,7 @@
         <div class="mac-video-dot mac-video-green" id="fullscreenVideo"></div>
       </div>
       <div class="video-title-bar" id="videoModalTitle">Video Preview</div>
-      <div style="width: 60px;"></div> <!-- Espaciador para centrar el título -->
+      <div style="width: 60px;"></div>
     </div>
     <div class="mac-video-content">
       <iframe id="expandedVideo" 
@@ -245,6 +250,7 @@
     <div class="card" data-title="bundles" data-description="bundles and characters" data-category="modeling">
       <h3>bundles</h3>
       <small class="subtitle">bundles and characters</small>
+      <!-- RUTAS CORREGIDAS: static/modeling/bundles/ -->
       <img src="static/modeling/bundles/bundle1.png" alt="Bundle 1">
       <img src="static/modeling/bundles/bundle2.png" alt="Bundle 2">
       <img src="static/modeling/bundles/bundle3.png" alt="Bundle 3">
@@ -254,6 +260,7 @@
     <div class="card" data-title="mapping" data-description="mapping and housing" data-category="modeling">
       <h3>mapping</h3>
       <small class="subtitle">mapping and housing</small>
+      <!-- RUTAS CORREGIDAS: static/modeling/mapping/ -->
       <img src="static/modeling/mapping/map1.png" alt="Map 1">
       <img src="static/modeling/mapping/map2.png" alt="Map 2">
       <img src="static/modeling/mapping/map3.png" alt="Map 3">
@@ -263,18 +270,33 @@
     <div class="card" data-title="weapons" data-description="weapons and accessories" data-category="modeling">
       <h3>weapons</h3>
       <small class="subtitle">weapons and accessories</small>
+      <!-- RUTAS CORREGIDAS: static/modeling/weapons/ -->
       <img src="static/modeling/weapons/weapon1.png" alt="Weapon 1">
       <img src="static/modeling/weapons/weapon2.png" alt="Weapon 2">
       <img src="static/modeling/weapons/weapon3.png" alt="Weapon 3">
       <img src="static/modeling/weapons/weapon4.png" alt="Weapon 4">
       <img src="static/modeling/weapons/weapon5.png" alt="Weapon 5">
     </div>
+  </div>
+  
+  <!-- Sección para el enlace al 3D Viewer -->
+  <div class="3d-viewer-section">
+    <div class="card center-card">
+      <h3><i class="fas fa-cube"></i> 3D Models Gallery</h3>
+      <p>Explore my complete collection of 3D models in an interactive viewer. Browse buildings, characters, props, and weapons with full 3D controls.</p>
+      <a href="3d-viewer.html" class="btn-3d-viewer-large">
+        <i class="fas fa-external-link-alt"></i>
+        Open 3D Model Viewer
+      </a>
     </div>
+  </div>
 </section>
+
 <section id="payments">
   <h2>Payments</h2>
   <div class="card">
     <div class="payments-grid">
+      <!-- RUTAS CORREGIDAS: payments/ (no static/payments/) -->
       <div class="payment-card"><img src="static/payments/payment1.png" alt="payment 1"></div>
       <div class="payment-card"><img src="static/payments/payment2.png" alt="payment 2"></div>
       <div class="payment-card"><img src="static/payments/payment3.png" alt="payment 3"></div>
@@ -287,22 +309,24 @@
     </div>
   </div>
 </section>
+
 <footer id="contact">
   <h2>Contact Me</h2>
   <div class="contact">
-    <!-- Discord: se puede abrir Discord con un enlace a usuario mediante el tag, aunque no es clicable directamente -->
     <a href="https://discord.com/users/1044626710_w" target="_blank" title="st1yler´s Discord">
       <i class="fa-brands fa-discord"></i>
     </a>
     
-    <!-- GitHub: enlace directo -->
     <a href="https://github.com/st1yler" target="_blank" title="GitHub">
       <i class="fa-brands fa-github"></i>
     </a>
     
-    <!-- Roblox: enlace a perfil -->
     <a href="https://www.roblox.com/users/10293637061/profile" target="_blank" title="Roblox">
       <i class="fa-solid fa-play"></i>
+    </a>
+    
+    <a href="3d-viewer.html" title="3D Model Viewer">
+      <i class="fas fa-cube"></i>
     </a>
   </div>
   <div class="copyright">
