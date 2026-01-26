@@ -119,6 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const sectionTop = section.offsetTop - this.threshold;
         const sectionId = section.getAttribute('id');
         
+        // Skip 3D viewer section if it doesn't have an ID
+        if (!sectionId) return;
+        
         // Calculate distance from viewport center
         const viewportCenter = scrollY + (windowHeight / 2);
         const sectionCenter = sectionTop + (section.offsetHeight / 2);
@@ -143,7 +146,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const intensity = Math.max(0, 1 - (distance / maxDistance));
       
       this.navLinks.forEach(link => {
-        const isActive = link.getAttribute('href') === `#${sectionId}`;
+        const href = link.getAttribute('href');
+        
+        // Handle internal links only (starting with #)
+        if (!href.startsWith('#')) return;
+        
+        const isActive = href === `#${sectionId}`;
         
         link.classList.remove(this.activeClass);
         
@@ -201,6 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
           requestAnimationFrame(animateScroll);
         }
       }
+      // External links will follow their normal behavior
     }
   }
   
@@ -214,10 +223,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchResults = document.getElementById('searchResults');
   const searchContainer = document.querySelector('.search-container');
   
-  // Elementos de contenido para buscar
+  // Elementos de contenido para buscar - INCLUDE HIRE SECTION
   const videoCards = document.querySelectorAll('.video-card-compact');
   const modelingCards = document.querySelectorAll('#modeling .card');
   const sectionHeadings = document.querySelectorAll('section h2');
+  const hireCard = document.querySelector('#hire .hire-card');
   
   // Variables para control del buscador
   let isSearchOpen = false;
@@ -254,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Buscar mientras se escribe
   searchInput.addEventListener('input', performSearch);
   
-  // Función de búsqueda
+  // Función de búsqueda - UPDATED TO INCLUDE HIRE SECTION
   function performSearch() {
     const query = searchInput.value.trim().toLowerCase();
     
@@ -302,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
     
-    // Buscar en secciones
+    // Buscar en secciones - INCLUDES HIRE SECTION
     sectionHeadings.forEach(heading => {
       const text = heading.textContent.toLowerCase();
       if (text.includes(query)) {
@@ -317,6 +327,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     });
+    
+    // Buscar en Hire section
+    if (hireCard) {
+      const hireText = hireCard.textContent.toLowerCase();
+      if (hireText.includes(query) || query.includes('hire') || query.includes('project')) {
+        results.push({
+          element: document.getElementById('hire'),
+          title: 'Hire Me',
+          description: 'Available for scripting and modeling projects. Message me on Discord.',
+          category: 'Services',
+          type: 'section',
+          icon: 'fas fa-briefcase'
+        });
+      }
+    }
     
     // Mostrar resultados
     displaySearchResults(results, query);
